@@ -1,19 +1,55 @@
 apply plugin: 'com.android.application'
 
+// Assinatura: keystore FORA do repositório. O arquivo .properties tem storeFile, storePassword,
+// keyAlias e keyPassword. Caminho em POLYGONIA_KEYSTORE_PROPERTIES (gradle.properties, variável de
+// ambiente ou -P); padrão abaixo. Sem o arquivo, a build release sai sem assinatura.
+def keystorePropertiesPath = project.findProperty('POLYGONIA_KEYSTORE_PROPERTIES') ?:
+        System.getenv('POLYGONIA_KEYSTORE_PROPERTIES') ?:
+        'C:/Users/sem-m/Polygonia-keys/keystore.properties'
+def keystorePropertiesFile = file(keystorePropertiesPath)
+def keystoreProperties = new Properties()
+if (keystorePropertiesFile.exists()) {
+    keystorePropertiesFile.withInputStream { keystoreProperties.load(it) }
+}
+
 android {
-    compileSdkVersion 29
-    buildToolsVersion "30.0.2"
+    namespace 'io.github.betinn.polygonia'
+    compileSdk 36
+    ndkVersion '28.2.13676358'
+
     defaultConfig {
         applicationId "io.github.betinn.polygonia"
-        minSdkVersion 23
-        targetSdkVersion 29
+        minSdkVersion 26
+        targetSdkVersion 36
         versionCode(getBuildVersionCode())
         versionName "${getVersion()}"
+
+        externalNativeBuild {
+            cmake {
+                arguments "-DCMAKE_BUILD_TYPE=Release", "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
+                abiFilters "arm64-v8a"
+            }
+        }
     }
+
+    signingConfigs {
+        release {
+            if (keystoreProperties['storeFile']) {
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (keystoreProperties['storeFile']) {
+                signingConfig signingConfigs.release
+            }
 
             ndk {
                 debugSymbolLevel "FULL"
@@ -24,40 +60,35 @@ android {
     externalNativeBuild {
         cmake {
             path "../../CMakeLists.txt"
-            version "3.10.2"
+            version "3.22.1"
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
-    defaultConfig {
-        externalNativeBuild {
-            cmake {
-                arguments "-DCMAKE_BUILD_TYPE=Release"
-                abiFilters "arm64-v8a", "armeabi-v7a", "x86_64"
-            }
-        }
-    }
+
     sourceSets {
         main.assets.srcDirs += "../../data"
     }
 
-    // Blocked on R21 until CMake is updated to 3.19 or later.
-    ndkVersion '21.4.7075529'
+    packagingOptions {
+        jniLibs {
+            // Bibliotecas descompactadas e alinhadas a 16 KB (exigência da Play para targetSdk 35+).
+            useLegacyPackaging false
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.preference:preference:1.2.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation "androidx.viewpager2:viewpager2:1.0.0"
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "androidx.viewpager2:viewpager2:1.1.0"
 }
 
 // Adapted from Dolphin.

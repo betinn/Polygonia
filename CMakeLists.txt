@@ -53,6 +53,9 @@ if(USE_WAYLAND)
 endif()
 
 if(ANDROID)
+  # NDK r26+: símbolos acima do minSdk viram erro de disponibilidade; o cubeb resolve AAudio por
+  # dlopen em tempo de execução, então basta torná-los fracos (documentação do NDK).
+  add_compile_definitions(__ANDROID_UNAVAILABLE_SYMBOLS_ARE_WEAK__)
   if(BUILD_NOGUI_FRONTEND)
     message(WARNING "Building for Android, disabling NoGUI frontend")
     set(BUILD_NOGUI_FRONTEND OFF)
