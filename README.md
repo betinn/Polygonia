@@ -33,7 +33,8 @@ Google Play em teste fechado.
 - Pasta de usuário no armazenamento privado do app (`Android/data/io.github.betinn.polygonia/files`):
   sem permissão de armazenamento, sem `INTERNET`. App 100 % offline, sem coleta de dados.
 - Padrões: Vulkan, 4x interno, PGXP (geometria + textura + culling), widescreen hack 16:9, filtro
-  xBR sem mistura de bordas, overlay de toque digital, paisagem, áudio 2048 frames.
+  de textura **Nearest**, overlay de toque digital, paisagem, áudio 2048 frames. Os padrões são
+  gravados uma vez (chave `Polygonia/DefaultsApplied2`); tudo continua ajustável nas configurações.
 
 ## O que o app NÃO contém
 
@@ -42,23 +43,34 @@ fornece o próprio disco no armazenamento do aparelho.
 
 ## Compilar
 
-Exigências do `android/` de 2021: JDK 11, Android SDK com `platforms;android-29`,
-`build-tools;30.0.2`, `ndk;21.4.7075529`, `cmake;3.10.2.4988404`; Gradle 7.0.2 (wrapper) e AGP 4.2.1.
+Build modernizada para a Google Play (commit `37096c3e4`): AGP 8.7.3, Gradle 8.9 (wrapper),
+compileSdk/targetSdk 36, minSdk 26, NDK `28.2.13676358`, CMake `3.22.1`, só `arm64-v8a`, Java 17.
+Exige JDK 17 ou mais novo (`JAVA_HOME`) e um Android SDK com esses componentes.
 
 ```bash
 cd android
-echo "sdk.dir=C:/tools/android-sdk" > local.properties   # barras normais
-./gradlew assembleDebug                                   # APK em app/build/outputs/apk/debug/
-./gradlew assembleRelease bundleRelease                   # exige keystore (ver abaixo)
+echo "sdk.dir=C:/tools/android-sdk" > local.properties   # barras normais; arquivo ignorado pelo git
+./gradlew --no-daemon assembleDebug                       # APK em app/build/outputs/apk/debug/
+./gradlew --no-daemon bundleRelease assembleRelease       # .aab e .apk assinados (ver abaixo)
+adb install -r -t app/build/outputs/apk/debug/app-debug.apk
 ```
 
-Assinatura: a keystore fica **fora** do repositório; `android/keystore.properties` (ignorado pelo
-git) aponta para ela.
+No Windows, rode pelo Git Bash (o PowerShell 5.1 atrapalha o `gradlew`). `versionName` vem de
+`git describe --tags` e `versionCode` do número de commits, então cada commit gera um código maior.
+
+Assinatura: a keystore fica **fora** do repositório. `app/build.gradle` lê um `keystore.properties`
+(`storeFile`, `storePassword`, `keyAlias`, `keyPassword`) pelo caminho em
+`POLYGONIA_KEYSTORE_PROPERTIES` (propriedade do Gradle ou variável de ambiente). Sem o arquivo, a
+build release sai sem assinatura.
+
+Documentos: `docs/play-store.md` (roteiro do teste fechado na Play) e `docs/privacidade.md`
+(política de privacidade).
 
 ## Notas
 
 - Aparelho de referência: Samsung Galaxy Tab S10 Ultra (Dimensity 9300+, Mali-G720, Android 16).
   Bust A Groove 2 (SLUS-01159) a 60 fps constantes em 4x.
 - GPUs Mali não têm *dual-source blend* no Vulkan; o xBR/JINC2 completos caem para "sem mistura de
-  bordas".
+  bordas", e nesse modo as cores saem lavadas/esbranquiçadas. Por isso o padrão é `Nearest`; quem
+  quiser filtro pode testar o renderer OpenGL nas configurações.
 - Controles Bluetooth/USB (DualSense, Xbox) funcionam pelo mapeamento automático do app.

@@ -55,4 +55,5 @@ __pycache__
 *.keystore
 logs/
 android/local.properties
+keystore.properties
 !android/app/src/main/assets/bios/openbios.bin

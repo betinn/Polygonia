@@ -139,13 +139,16 @@ public class MainActivity extends AppCompatActivity {
 
     // Polygonia: boot direto no jogo escolhido.
     private static final String PREF_BOOT_GAME_PATH = "Polygonia/BootGamePath";
-    private static final String PREF_DEFAULTS_APPLIED = "Polygonia/DefaultsApplied";
+    // "DefaultsApplied2": versão 2 dos padrões (filtro Nearest). Instalações antigas com a chave sem
+    // sufixo recebem os padrões novos na próxima abertura.
+    private static final String PREF_DEFAULTS_APPLIED = "Polygonia/DefaultsApplied2";
     private boolean mAutoBootArmed = false;
 
     /**
      * Padrões do Polygonia na primeira execução: Vulkan, 4x interno, PGXP, widescreen 16:9,
-     * xBR sem mistura de bordas (o xBR completo exige dual-source blend, ausente em GPUs Mali),
-     * overlay de toque digital, paisagem, áudio 2048 frames.
+     * filtro de textura Nearest (o xBR, mesmo sem mistura de bordas, deixa as cores lavadas no
+     * Mali/Vulkan; o xBR completo exige dual-source blend, ausente nessas GPUs), overlay de
+     * toque digital, paisagem, áudio 2048 frames.
      */
     private void applyPolygoniaDefaults() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -160,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 .putBoolean("GPU/PGXPCulling", true)
                 .putBoolean("GPU/WidescreenHack", true)
                 .putString("Display/AspectRatio", "16:9")
-                .putString("GPU/TextureFilter", "xBRBinAlpha")
+                .putString("GPU/TextureFilter", "Nearest")
                 .putBoolean("GPU/TrueColor", true)
                 .putString("Controller1/TouchscreenControllerView", "digital")
                 .putString("Main/EmulationScreenOrientation", "landscape")

@@ -48,7 +48,7 @@ DuckStation (versão de 2021, GPLv3).
 Recursos:
 • Renderização Vulkan com resolução interna até 4x
 • PGXP (correção de geometria e perspectiva das texturas)
-• Hack de widescreen 16:9 e filtro de texturas xBR
+• Hack de widescreen 16:9
 • Controle de toque na tela e suporte a controles Bluetooth/USB
 • Boot direto no jogo escolhido
 • 100 % offline, sem anúncios, sem coleta de dados
