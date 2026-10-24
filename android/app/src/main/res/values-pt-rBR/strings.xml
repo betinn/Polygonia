@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DuckStation</string>
+    <string name="app_name">Polygonia</string>
     <string name="action_settings">Configurações</string>
     <string name="action_controller_mapping">Configurações de Controle</string>
     <string name="title_activity_settings">Configurações</string>
@@ -137,9 +137,9 @@
     <string name="main_activity_get_path_from_file_error">Falha ao obter o caminho para o arquivo selecionado. Certifique-se de que o arquivo esteja no armazenamento interno / externo.\n\nTap.\nSelect "Mostrar armazenamento interno".\nTap selecione o nome do seu dispositivo ou cartão SD.</string>
     <string name="main_activity_ok">OK</string>
     <string name="main_activity_get_path_from_directory_error">Falha ao obter o caminho para o arquivo selecionado. Certifique-se de que o arquivo esteja no armazenamento interno / externo. \n\nTap the overflow button in the directory selector.\nSelect \"Mostrar armazenamento interno\".\nTap selecione o nome do seu dispositivo ou cartão SD.</string>
-    <string name="main_activity_external_storage_permissions_error">Permissões de armazenamento externo são necessárias para usar o DuckStation.</string>
+    <string name="main_activity_external_storage_permissions_error">Permissões de armazenamento externo são necessárias para usar o Polygonia.</string>
     <string name="main_activity_choose_disc_image">Escolha Arquivo de Jogo</string>
-    <string name="main_activity_missing_bios_image_prompt">Nenhum BIOS foi encontrada no diretório de BIOS do DuckStation. Deseja localizar e importar o BIOS agora?</string>
+    <string name="main_activity_missing_bios_image_prompt">Nenhum BIOS foi encontrada no diretório de BIOS do Polygonia. Deseja localizar e importar o BIOS agora?</string>
     <string name="main_activity_missing_bios_image">BIOS ausente</string>
     <string name="main_activity_yes">Sim</string>
     <string name="main_activity_no">Não</string>
@@ -248,7 +248,7 @@
     <string name="settings_achievements_view_profile">Ver Perfil</string>
     <string name="settings_summary_achievements_view_profile">Ver Peril...</string>
     <string name="settings_achievements_test_mode">Ativar Modo Teste</string>
-    <string name="settings_summary_achievements_test_mode">Quando ativado, DuckStation entenderá que todas as Conquistas deverão ficar travadas e não mandará uma notificação para o servidor não marcando a mesma como destravada.</string>
+    <string name="settings_summary_achievements_test_mode">Quando ativado, Polygonia entenderá que todas as Conquistas deverão ficar travadas e não mandará uma notificação para o servidor não marcando a mesma como destravada.</string>
     <string name="settings_achievements_use_first_disc_from_playlist">Usar primeiro Disco (Playlist)</string>
     <string name="settings_summary_achievements_use_first_disc_from_playlist">Quando ativado, o primeiro disco em uma lista de reprodução será usado para conquistas, independente de qual disco está ativo.</string>
     <string name="achievement_settings_login_title">Credenciais do RetroAchievements</string>
@@ -261,7 +261,7 @@
     <string name="achievement_points_format_string">%d pontos</string>
     <string name="achievement_summary_format_string">Você obteve %1$d de %2$d conquistas, ganhando %3$d pontos de %4$d disponiveis.</string>
     <string name="achievement_title_challenge_mode_format_string">%s (Modo Hardcore)</string>
-    <string name="settings_achievements_disclaimer">DuckStation usa o RetroAchievements como base de dados para as conquistas. Para usar esta função, considere fazer sua conta em:(https://retroachievements.org).</string>
+    <string name="settings_achievements_disclaimer">Polygonia usa o RetroAchievements como base de dados para as conquistas. Para usar esta função, considere fazer sua conta em:(https://retroachievements.org).</string>
     <string name="settings_achievements_confirm_logout_title">Confirmar Sair</string>
     <string name="settings_achievements_confirm_logout_message">O encerramento de uma sessão desabilitará as conquistas até que entre novamente. Conquistas abertas anteriormente não serão perdidas.</string>
     <string name="controller_binding_device_for_vibration">Vibração do Dispositivo</string>

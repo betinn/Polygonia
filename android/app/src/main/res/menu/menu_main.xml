@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.github.stenzek.duckstation.MainActivity">
+    tools:context="io.github.betinn.polygonia.MainActivity">
     <group android:id="@+id/start_menu">
         <item
             android:id="@+id/action_start_file"

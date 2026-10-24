@@ -31,7 +31,7 @@ std::unique_ptr<HTTPDownloader> HTTPDownloader::Create(const char* user_agent)
 bool AndroidHTTPDownloader::Initialize(const char* user_agent)
 {
   JNIEnv* env = AndroidHelpers::GetJNIEnv();
-  jclass klass = env->FindClass("com/github/stenzek/duckstation/URLDownloader");
+  jclass klass = env->FindClass("io/github/betinn/polygonia/URLDownloader");
   if (!klass)
     return false;
 

@@ -22,8 +22,8 @@
         app:iconSpaceReserved="false">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.github.stenzek.duckstation.GameDirectoriesActivity"
-            android:targetPackage="com.github.stenzek.duckstation" />
+            android:targetClass="io.github.betinn.polygonia.GameDirectoriesActivity"
+            android:targetPackage="io.github.betinn.polygonia" />
     </Preference>
     <ListPreference
         app:key="Main/EmulationSpeed"

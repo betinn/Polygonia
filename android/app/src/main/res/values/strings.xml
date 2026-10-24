@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DuckStation</string>
+    <string name="app_name">Polygonia</string>
     <string name="action_settings">Settings</string>
     <string name="action_controller_mapping">Controller Settings</string>
     <string name="title_activity_settings">Settings</string>
@@ -23,7 +23,7 @@
     <string name="settings_summary_load_patch_codes"><![CDATA[Loads patch codes from cheats/<game name>.cht in PCSXR format. Codes can be toggled while ingame.]]></string>
     <string name="settings_apply_compatibility_settings">Apply Compatibility Settings</string>
     <string name="settings_summary_apply_compatibility_settings">Automatically disable enhancements when they are not supported by games.</string>
-    <string name="settings_summary_video_sync">Enable this option to match DuckStation\'s refresh rate with your current monitor or screen. VSync is automatically disabled when it is not possible (e.g. running at non-100% speed).</string>
+    <string name="settings_summary_video_sync">Enable this option to match Polygonia\'s refresh rate with your current monitor or screen. VSync is automatically disabled when it is not possible (e.g. running at non-100% speed).</string>
     <string name="settings_video_sync">Video Sync</string>
     <string name="settings_cpu_overclocking">CPU Overclocking</string>
     <string name="settings_cdrom_region_check">Region Check</string>
@@ -137,9 +137,9 @@
     <string name="main_activity_get_path_from_file_error">Failed to get path for the selected file. Please make sure the file is in internal/external storage.\n\nTap the overflow button in the directory selector.\nSelect "Show Internal Storage".\nTap the menu button and select your device name or SD card.</string>
     <string name="main_activity_ok">OK</string>
     <string name="main_activity_get_path_from_directory_error">Failed to get path for the selected directory. Please make sure the directory is in internal/external storage.\n\nTap the overflow button in the directory selector.\nSelect \"Show Internal Storage\".\nTap the menu button and select your device name or SD card.</string>
-    <string name="main_activity_external_storage_permissions_error">External storage permissions are required to use DuckStation.</string>
+    <string name="main_activity_external_storage_permissions_error">External storage permissions are required to use Polygonia.</string>
     <string name="main_activity_choose_disc_image">Choose Disc Image</string>
-    <string name="main_activity_missing_bios_image_prompt">No BIOS image was found in DuckStation\'s bios directory. Do you wish to locate and import a BIOS image now?</string>
+    <string name="main_activity_missing_bios_image_prompt">No BIOS image was found in Polygonia\'s bios directory. Do you wish to locate and import a BIOS image now?</string>
     <string name="main_activity_missing_bios_image">Missing BIOS Image</string>
     <string name="main_activity_yes">Yes</string>
     <string name="main_activity_no">No</string>
@@ -232,7 +232,7 @@
     <string name="menu_game_list_entry_game_properties">Game Properties</string>
     <string name="emulation_activity_change_disc_select_new_file">Select New File...</string>
     <string name="settings_achievements_enable">Enable RetroAchievements</string>
-    <string name="settings_summary_achievements_enable">When enabled and logged in, DuckStation will scan for achievements on startup.</string>
+    <string name="settings_summary_achievements_enable">When enabled and logged in, Polygonia will scan for achievements on startup.</string>
     <string name="settings_achievements_challenge_mode">Enable Hardcore Mode</string>
     <string name="settings_summary_achievements_challenge_mode">Challenge mode. Disables save states, patch code, and slowdown functions, but you receive double the achievement points. Cannot be toggled while ingame.</string>
     <string name="settings_achievements_rich_presence">Enable Rich Presence</string>
@@ -248,11 +248,11 @@
     <string name="settings_achievements_view_profile">View Profile</string>
     <string name="settings_summary_achievements_view_profile">Opens a link to your profile.</string>
     <string name="settings_achievements_test_mode">Enable Test Mode</string>
-    <string name="settings_summary_achievements_test_mode">When enabled, DuckStation will assume all achievements are locked and not send any unlock notifications to the server.</string>
+    <string name="settings_summary_achievements_test_mode">When enabled, Polygonia will assume all achievements are locked and not send any unlock notifications to the server.</string>
     <string name="settings_achievements_use_first_disc_from_playlist">Use First Disc From Playlist</string>
     <string name="settings_summary_achievements_use_first_disc_from_playlist">When enabled, the first disc in a playlist will be used for achievements, regardless of which disc is active.</string>
     <string name="achievement_settings_login_title">RetroAchievements Login</string>
-    <string name="achievement_settings_login_help">Please enter user name and password for retroachievements.org below. Your password will not be saved in DuckStation, an access token will be generated and used instead.</string>
+    <string name="achievement_settings_login_help">Please enter user name and password for retroachievements.org below. Your password will not be saved in Polygonia, an access token will be generated and used instead.</string>
     <string name="achievement_settings_login_username_hint">Username</string>
     <string name="achievement_settings_login_password_hint">Password</string>
     <string name="achievement_settings_login_login_button">Login</string>
@@ -261,7 +261,7 @@
     <string name="achievement_points_format_string">%d points</string>
     <string name="achievement_summary_format_string">You have unlocked %1$d of %2$d achievements, earning %3$d of %4$d possible points.</string>
     <string name="achievement_title_challenge_mode_format_string">%s (Hardcore Mode)</string>
-    <string name="settings_achievements_disclaimer">DuckStation uses RetroAchievements (retroachievements.org) as an achievement database and for tracking progress.</string>
+    <string name="settings_achievements_disclaimer">Polygonia uses RetroAchievements (retroachievements.org) as an achievement database and for tracking progress.</string>
     <string name="settings_achievements_confirm_logout_title">Confirm Logout</string>
     <string name="settings_achievements_confirm_logout_message">After logging out, no more achievements will be unlocked until you log back in again. Achievements already unlocked will not be lost.</string>
     <string name="controller_binding_device_for_vibration">Device for Vibration</string>
@@ -325,7 +325,7 @@
     <string name="main_activity_empty_game_list_add_directory">Add Game Directory</string>
     <string name="main_activity_empty_game_list_start_file">Start File</string>
     <string name="update_notes_title">Update Notes</string>
-    <string name="update_notes_message_version_controller_update">This DuckStation update includes support for multiple controllers with vibration, and binding devices such as keyboards/volume buttons.\n\nYou must re-bind your controllers, otherwise they will no longer function. Do you want to do this now?</string>
+    <string name="update_notes_message_version_controller_update">This Polygonia update includes support for multiple controllers with vibration, and binding devices such as keyboards/volume buttons.\n\nYou must re-bind your controllers, otherwise they will no longer function. Do you want to do this now?</string>
     <string name="settings_osd_show_show_inputs">Show Controller Input</string>
     <string name="settings_summary_osd_show_inputs">Shows the current controller state of the system in the bottom-left corner of the display.</string>
     <string name="touchscreen_controller_edit_menu">Edit Menu</string>

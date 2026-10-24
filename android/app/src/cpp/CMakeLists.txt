@@ -11,15 +11,15 @@ set(SRCS
   android_settings_interface.h
 )
 
-add_library(duckstation-native SHARED ${SRCS})
-target_link_libraries(duckstation-native PRIVATE android frontend-common core common glad imgui)
+add_library(polygonia-native SHARED ${SRCS})
+target_link_libraries(polygonia-native PRIVATE android frontend-common core common glad imgui)
 
 find_package(OpenSLES)
 if(OPENSLES_FOUND)
   message("Enabling OpenSL ES audio stream")
-  target_sources(duckstation-native PRIVATE
+  target_sources(polygonia-native PRIVATE
     opensles_audio_stream.cpp
     opensles_audio_stream.h)
-  target_link_libraries(duckstation-native PRIVATE OpenSLES::OpenSLES)
-  target_compile_definitions(duckstation-native PRIVATE "-DUSE_OPENSLES=1")
+  target_link_libraries(polygonia-native PRIVATE OpenSLES::OpenSLES)
+  target_compile_definitions(polygonia-native PRIVATE "-DUSE_OPENSLES=1")
 endif()

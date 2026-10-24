@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DuckStation</string>
+    <string name="app_name">Polygonia</string>
     <string name="action_settings">Configuraciones</string>
     <string name="action_controller_mapping">Mapeado del Control</string>
     <string name="title_activity_settings">Configuraciones</string>
@@ -23,7 +23,7 @@
     <string name="settings_summary_load_patch_codes"><![CDATA[Cargar Códigos de Parche de trucos/<game name>.cht en formato PCSXR. Los códigos pueden ser activados dentro del juego.]]></string>
     <string name="settings_apply_compatibility_settings">Aplicar configuración de compatiblidad</string>
     <string name="settings_summary_apply_compatibility_settings">Desactiva las mejoras automáticamente cuando no son compatibles con los juegos.</string>
-    <string name="settings_summary_video_sync">Habilita esta opción para coincidir la tasa de refresco de DuckStation con la de tu pantalla. La VSync se deshabilita automáticamente cuando no sea posible (ejemplo, no llegar al 100% de la velocidad).</string>
+    <string name="settings_summary_video_sync">Habilita esta opción para coincidir la tasa de refresco de Polygonia con la de tu pantalla. La VSync se deshabilita automáticamente cuando no sea posible (ejemplo, no llegar al 100% de la velocidad).</string>
     <string name="settings_video_sync">Sincronizar Video</string>
     <string name="settings_cpu_overclocking">CPU Overclocking</string>
     <string name="settings_cdrom_region_check">Chequeo Regional de CD-ROM</string>
@@ -137,9 +137,9 @@
     <string name="main_activity_get_path_from_file_error">No se pudo obtener la ruta del archivo seleccionado. Asegúrese de que el archivo esté un almacenamiento interno/externo.\n\nToque el botón que sobresale en el selector de directorio.\nSeleccione "Mostrar Almacenamiento Interno".\nToque el botón de menú y seleccione el nombre de su dispositivo o tarjeta SD .</string>
     <string name="main_activity_ok">OK</string>
     <string name="main_activity_get_path_from_directory_error">No se pudo obtener la ruta del directorio seleccionado. Asegúrese de que el directorio esté un almacenamiento interno/externo.\n\nToque el botón que sobresale en el selector de directorio.\nSeleccione \"Mostrar Almacenamiento Interno\".\nToque el botón de menú y seleccione el nombre de su dispositivo o tarjeta SD .</string>
-    <string name="main_activity_external_storage_permissions_error">Se requieren permisos de almacenamiento externo para usar DuckStation.</string>
+    <string name="main_activity_external_storage_permissions_error">Se requieren permisos de almacenamiento externo para usar Polygonia.</string>
     <string name="main_activity_choose_disc_image">Seleccionar Imagen de Disco</string>
-    <string name="main_activity_missing_bios_image_prompt">No se encontró ninguna imagen de BIOS en el directorio BIOS de DuckStation. ¿Quiere localizar e importar una imagen de BIOS ahora?</string>
+    <string name="main_activity_missing_bios_image_prompt">No se encontró ninguna imagen de BIOS en el directorio BIOS de Polygonia. ¿Quiere localizar e importar una imagen de BIOS ahora?</string>
     <string name="main_activity_missing_bios_image">Imagen BIOS Ausente</string>
     <string name="main_activity_yes">Si</string>
     <string name="main_activity_no">No</string>
@@ -232,7 +232,7 @@
     <string name="menu_game_list_entry_game_properties">Propiedades del Juego</string>
     <string name="emulation_activity_change_disc_select_new_file">Seleccionar nuevo archivo...</string>
     <string name="settings_achievements_enable">Habilitar RetroAchievements</string>
-    <string name="settings_summary_achievements_enable">Cuando está habilitado y logueado, DuckStation buscará logros al iniciarse.</string>
+    <string name="settings_summary_achievements_enable">Cuando está habilitado y logueado, Polygonia buscará logros al iniciarse.</string>
     <string name="settings_achievements_challenge_mode">Habilitar modo Hardcore</string>
     <string name="settings_summary_achievements_challenge_mode">Modo de Desafío. Desactiva el estado de guardado, los trucos y las funciones de ralentización, pero recibes el doble de puntos de logros. No se puede alternar en el juego.</string>
     <string name="settings_achievements_rich_presence">Habilitar Rich Presence</string>
@@ -248,11 +248,11 @@
     <string name="settings_achievements_view_profile">Ver Perfil</string>
     <string name="settings_summary_achievements_view_profile">Abre un enlace a tu perfil.</string>
     <string name="settings_achievements_test_mode">Habilitar el modo Test</string>
-    <string name="settings_summary_achievements_test_mode">Cuando está habilitado, DuckStation asumirá que todos los logros están bloqueados y no enviará notificaciones de desbloqueo al servidor.</string>
+    <string name="settings_summary_achievements_test_mode">Cuando está habilitado, Polygonia asumirá que todos los logros están bloqueados y no enviará notificaciones de desbloqueo al servidor.</string>
     <string name="settings_achievements_use_first_disc_from_playlist">Usar el primer disco de la Lista</string>
     <string name="settings_summary_achievements_use_first_disc_from_playlist">Cuando está habilitado, el primer disco de una lista se utilizará para los logros, independientemente del disco que esté activo.</string>
     <string name="achievement_settings_login_title">Inicio de sesión en RetroAchievements</string>
-    <string name="achievement_settings_login_help">Ingrese el nombre de usuario y password de retroachievements.org. Su contraseña no será guardada en DuckStation, en su lugar se generará y se utilizará un token de acceso.</string>
+    <string name="achievement_settings_login_help">Ingrese el nombre de usuario y password de retroachievements.org. Su contraseña no será guardada en Polygonia, en su lugar se generará y se utilizará un token de acceso.</string>
     <string name="achievement_settings_login_username_hint">Usuario</string>
     <string name="achievement_settings_login_password_hint">Contraseña</string>
     <string name="achievement_settings_login_login_button">Loguearse</string>
@@ -261,7 +261,7 @@
     <string name="achievement_points_format_string">%d puntos</string>
     <string name="achievement_summary_format_string">Has desbloqueado %1$d de %2$d logros y has obtenido %3$d de %4$d puntos posibles.</string>
     <string name="achievement_title_challenge_mode_format_string">%s (Modo Hardcore)</string>
-    <string name="settings_achievements_disclaimer">DuckStation utiliza RetroAchievements (retroachievements.org) como base de datos de logros y para realizar un seguimiento del progreso.</string>
+    <string name="settings_achievements_disclaimer">Polygonia utiliza RetroAchievements (retroachievements.org) como base de datos de logros y para realizar un seguimiento del progreso.</string>
     <string name="settings_achievements_confirm_logout_title">Confirmar cierre de sesión</string>
     <string name="settings_achievements_confirm_logout_message">Después de cerrar la sesión, no se desbloquearán más logros hasta que vuelva a iniciar sesión. Los logros desbloqueados no se perderán.</string>
     <string name="controller_binding_device_for_vibration">Dispositivo para vibración</string>
@@ -325,7 +325,7 @@
     <string name="main_activity_empty_game_list_add_directory">Añadir directorio de juegos</string>
     <string name="main_activity_empty_game_list_start_file">Iniciar archivo</string>
     <string name="update_notes_title">Notas de actualización</string>
-    <string name="update_notes_message_version_controller_update">Esta actualización de DuckStation incluye soporte para múltiples controles con vibración y dispositivos vinculantes como teclados/botones de volumen.\n\nDebe volver a re-asignar sus controles, de lo contrario dejarán de funcionar. ¿Quieres hacer esto ahora?</string>
+    <string name="update_notes_message_version_controller_update">Esta actualización de Polygonia incluye soporte para múltiples controles con vibración y dispositivos vinculantes como teclados/botones de volumen.\n\nDebe volver a re-asignar sus controles, de lo contrario dejarán de funcionar. ¿Quieres hacer esto ahora?</string>
     <string name="settings_osd_show_show_inputs">Mostrar entrada del control</string>
     <string name="settings_summary_osd_show_inputs">Muestra el estado actual del control del sistema en la esquina inferior izquierda de la pantalla.</string>
     <string name="touchscreen_controller_edit_menu">Editar menu</string>

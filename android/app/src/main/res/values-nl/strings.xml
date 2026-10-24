@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DuckStation</string>
+    <string name="app_name">Polygonia</string>
     <string name="action_settings">Instellingen</string>
     <string name="title_activity_settings">Instellingen</string>
     <string name="settings_console_region">Console Gebied</string>
@@ -22,7 +22,7 @@
     <string name="settings_summary_load_patch_codes"><![CDATA[Laad patch codes van cheats/<game name>.cht in PCSXR formaat. Codes kunnen aan- en uitgeschakeld worden in-game.]]></string>
     <string name="settings_apply_compatibility_settings">Pas Compatibiliteitsinstellingen Toe</string>
     <string name="settings_summary_apply_compatibility_settings">Schakelt automatisch verbeteringen uit wanneer ze niet door spellen ondersteund worden.</string>
-    <string name="settings_summary_video_sync">Schakel deze optie in om DuckStation\'s verversingssnelheid te synchroniseren met je scherm. VSync is automatisch uitegeschakeld wanneer dit niet mogelijk is (bijvoorbeeld wanneer er niet op 100% snelheid gespeeld wordt).</string>
+    <string name="settings_summary_video_sync">Schakel deze optie in om Polygonia\'s verversingssnelheid te synchroniseren met je scherm. VSync is automatisch uitegeschakeld wanneer dit niet mogelijk is (bijvoorbeeld wanneer er niet op 100% snelheid gespeeld wordt).</string>
     <string name="settings_video_sync">Video Sync</string>
     <string name="settings_cpu_overclocking">CPU Overclocken</string>
     <string name="settings_cdrom_region_check">CD-ROM Regio Check</string>
@@ -132,9 +132,9 @@
     <string name="main_activity_get_path_from_file_error">Mislukt om het bestand op te halen. Zorg ervoor dat het bestand in de interne/externe opslag is.\n\nTik op de overflow knop in de folderselectie.\nSelecteer "Toon Interne Opslag".\nTik op de menuknop en selecteer uw apparaat of SD kaart.</string>
     <string name="main_activity_ok">Oké</string>
     <string name="main_activity_get_path_from_directory_error">Pad van folder ophalen mislukt.Zorg ervoor dat de folder in de interne/externe opslag is.\n\nTik op de overflow knop in de folderselectie.\nSelecteer "Toon Interne Opslag".\nTik op de menuknop en selecteer uw apparaat of SD kaart.</string>
-    <string name="main_activity_external_storage_permissions_error">Toegang tot externe opslag nodig om DuckStation te gebruiken.</string>
+    <string name="main_activity_external_storage_permissions_error">Toegang tot externe opslag nodig om Polygonia te gebruiken.</string>
     <string name="main_activity_choose_disc_image">Kies Disc Image</string>
-    <string name="main_activity_missing_bios_image_prompt">Er was geen BIOS image was gevonden in DuckStation\'s bios folder. Wilt u nu een BIOS image importeren?</string>
+    <string name="main_activity_missing_bios_image_prompt">Er was geen BIOS image was gevonden in Polygonia\'s bios folder. Wilt u nu een BIOS image importeren?</string>
     <string name="main_activity_missing_bios_image">Ontbrekende BIOS Image</string>
     <string name="main_activity_yes">Ja</string>
     <string name="main_activity_no">Nee</string>

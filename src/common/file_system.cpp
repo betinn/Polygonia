@@ -117,7 +117,7 @@ void SetAndroidFileHelper(void* jvm, void* env, void* object)
     jenv->GetMethodID(s_android_FileHelper_class, "openURIAsFileDescriptor", "(Ljava/lang/String;Ljava/lang/String;)I");
   s_android_FileHelper_FindFiles =
     jenv->GetMethodID(s_android_FileHelper_class, "findFiles",
-                      "(Ljava/lang/String;I)[Lcom/github/stenzek/duckstation/FileHelper$FindResult;");
+                      "(Ljava/lang/String;I)[Lio/github/betinn/polygonia/FileHelper$FindResult;");
   s_android_FileHelper_getDisplayName =
     jenv->GetMethodID(s_android_FileHelper_class, "getDisplayNameForURIPath", "(Ljava/lang/String;)Ljava/lang/String;");
   s_android_FileHelper_getRelativePathForURIPath =
@@ -126,7 +126,7 @@ void SetAndroidFileHelper(void* jvm, void* env, void* object)
   Assert(s_android_FileHelper_openURIAsFileDescriptor && s_android_FileHelper_FindFiles &&
          s_android_FileHelper_getDisplayName && s_android_FileHelper_getRelativePathForURIPath);
 
-  jclass fr_class = jenv->FindClass("com/github/stenzek/duckstation/FileHelper$FindResult");
+  jclass fr_class = jenv->FindClass("io/github/betinn/polygonia/FileHelper$FindResult");
   Assert(fr_class);
   s_android_FileHelper_FindResult_class = static_cast<jclass>(jenv->NewGlobalRef(fr_class));
   Assert(s_android_FileHelper_FindResult_class);

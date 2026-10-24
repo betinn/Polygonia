@@ -34,7 +34,7 @@
         app:useSimpleSummaryProvider="true"
         app:iconSpaceReserved="false" />
 
-    <com.github.stenzek.duckstation.RatioPreference
+    <io.github.betinn.polygonia.RatioPreference
         numeratorKey="Display/CustomAspectRatioNumerator"
         defaultNumerator="4"
         minimumNumerator="1"

@@ -1,5 +1,5 @@
 <resources>
-	<string name="app_name">DuckStation</string>
+	<string name="app_name">Polygonia</string>
 	<string name="action_settings">Настройки</string>
 	<string name="action_controller_mapping">Настройки управления</string>
 	<string name="title_activity_settings">Настройки</string>
@@ -23,7 +23,7 @@
 	<string name="settings_summary_load_patch_codes">Загружать чит-коды из cheats/&lt;название игры&gt;.cht в формате PCSXR или Libretro. Коды можно активировать после запуска игры.</string>
 	<string name="settings_apply_compatibility_settings">Применять настройки совместимости</string>
 	<string name="settings_summary_apply_compatibility_settings">Автоматически отключать улучшения, которые не поддерживаются играми.</string>
-	<string name="settings_summary_video_sync">Включите для синхронизации частоты обновления DuckStation с частотой экрана устройства. Синхронизация автоматически выключится, если скорость эмуляции не равна 100%.</string>
+	<string name="settings_summary_video_sync">Включите для синхронизации частоты обновления Polygonia с частотой экрана устройства. Синхронизация автоматически выключится, если скорость эмуляции не равна 100%.</string>
 	<string name="settings_video_sync">Видеосинхронизация</string>
 	<string name="settings_cpu_overclocking">Разгон CPU</string>
 	<string name="settings_cdrom_region_check">Проверка региона CD-ROM</string>
@@ -137,7 +137,7 @@
 	<string name="main_activity_get_path_from_file_error">Не удалось получить путь к указанному файлу. Пожалуйста, убедитесь, что файл присутствует во внутреннем/внешнем хранилище. Нажмите значок настроек в окне выбора каталога. Включите отображение внутренней памяти. Нажмите кнопку меню и выберите устройство или SD-карту.</string>
 	<string name="main_activity_ok">OK</string>
 	<string name="main_activity_get_path_from_directory_error">Не удалось получить путь к указанному каталогу. Пожалуйста, убедитесь, что каталог присутствует во внутреннем/внешнем хранилище. Нажмите значок настроек в окне выбора каталога. Включите отображение внутренней памяти. Нажмите кнопку меню и выберите устройство или SD-карту.</string>
-	<string name="main_activity_external_storage_permissions_error">DuckStation требуется разрешение для доступа к внешнему хранилищу.</string>
+	<string name="main_activity_external_storage_permissions_error">Polygonia требуется разрешение для доступа к внешнему хранилищу.</string>
 	<string name="main_activity_choose_disc_image">Выберите образ диска</string>
 	<string name="main_activity_missing_bios_image_prompt">Не найдены образы BIOS в папке bios эмулятора. Указать путь и импортировать образ BIOS сейчас?</string>
 	<string name="main_activity_missing_bios_image">Отсутствует образ BIOS</string>
@@ -232,7 +232,7 @@
 	<string name="menu_game_list_entry_game_properties">Свойства</string>
 	<string name="emulation_activity_change_disc_select_new_file">Выбрать файл...</string>
 	<string name="settings_achievements_enable">Включить достижения</string>
-    	<string name="settings_summary_achievements_enable">Если опция включена и выполнен вход в учётную запись, DuckStation будет искать достижения при запуске игр.</string>
+    	<string name="settings_summary_achievements_enable">Если опция включена и выполнен вход в учётную запись, Polygonia будет искать достижения при запуске игр.</string>
     	<string name="settings_achievements_challenge_mode">Режим хардкора</string>
     	<string name="settings_summary_achievements_challenge_mode">Соревновательный режим. Отключает сохранение состояния, чит-коды, возможность замедления, но удваивает количество получаемых очков достижений. Нельзя включить во время игры.</string>
     	<string name="settings_achievements_rich_presence">Расширенный статус</string>
@@ -248,11 +248,11 @@
     	<string name="settings_achievements_view_profile">Просмотр профиля</string>
     	<string name="settings_summary_achievements_view_profile">Открыть ссылку на ваш профиль.</string>
     	<string name="settings_achievements_test_mode">Тестовый режим</string>
-    	<string name="settings_summary_achievements_test_mode">Если включено, DuckStation будет считать, что все достижения закрыты и не будет отправлять уведомления об открытии на сервер.</string>
+    	<string name="settings_summary_achievements_test_mode">Если включено, Polygonia будет считать, что все достижения закрыты и не будет отправлять уведомления об открытии на сервер.</string>
     	<string name="settings_achievements_use_first_disc_from_playlist">Использовать первый диск в плейлисте</string>
     	<string name="settings_summary_achievements_use_first_disc_from_playlist">Если включено, для получения достижений будет использоваться первый диск в плейлисте, независимо от активного диска.</string>
     	<string name="achievement_settings_login_title">Вход в RetroAchievements</string>
-    	<string name="achievement_settings_login_help">Пожалуйста, введите логин и пароль для retroachievements.org. Ваш пароль не хранится в DuckStation. Вместо этого будет сгенерирован маркер доступа.</string>
+    	<string name="achievement_settings_login_help">Пожалуйста, введите логин и пароль для retroachievements.org. Ваш пароль не хранится в Polygonia. Вместо этого будет сгенерирован маркер доступа.</string>
     	<string name="achievement_settings_login_username_hint">Логин</string>
     	<string name="achievement_settings_login_password_hint">Пароль</string>
     	<string name="achievement_settings_login_login_button">Вход</string>
@@ -261,7 +261,7 @@
     	<string name="achievement_points_format_string">%d очков</string>
     	<string name="achievement_summary_format_string">Вы открыли %1$d из %2$d достижений, заработав %3$d очков из %4$d возможных.</string>
     	<string name="achievement_title_challenge_mode_format_string">%s (Режим хардкора)</string>
-    	<string name="settings_achievements_disclaimer">DuckStation использует RetroAchievements (retroachievements.org) для отслеживания прогресса и получения данных о достижениях.</string>
+    	<string name="settings_achievements_disclaimer">Polygonia использует RetroAchievements (retroachievements.org) для отслеживания прогресса и получения данных о достижениях.</string>
     	<string name="settings_achievements_confirm_logout_title">Подтвердите выход</string>
     	<string name="settings_achievements_confirm_logout_message">Завершение сеанса отключит получение достижений до следующего входа в учётную запись. Открытые ранее достижения не будут утеряны.</string>
 	<string name="controller_binding_device_for_vibration">Вибрация для устройства</string>
@@ -325,7 +325,7 @@
 	<string name="main_activity_empty_game_list_add_directory">Добавить каталог с играми</string>
 	<string name="main_activity_empty_game_list_start_file">Открыть файл</string>
 	<string name="update_notes_title">Примечание к обновлению</string>
-	<string name="update_notes_message_version_controller_update">В данном обновлении DuckStation добавлена возможность подключения нескольких геймпадов с поддержкой отдачи, поддержка клавиатур, возможность привязки действий к кнопкам громкости.\n\nТребуется перенастроить привязки геймпадов, иначе они перестанут функционировать. Выполнить это сейчас?</string>
+	<string name="update_notes_message_version_controller_update">В данном обновлении Polygonia добавлена возможность подключения нескольких геймпадов с поддержкой отдачи, поддержка клавиатур, возможность привязки действий к кнопкам громкости.\n\nТребуется перенастроить привязки геймпадов, иначе они перестанут функционировать. Выполнить это сейчас?</string>
 	<string name="settings_osd_show_show_inputs">Показывать нажатия контроллера</string>
     	<string name="settings_summary_osd_show_inputs">Показывать системное состояние контроллера в левом нижнем углу экрана.</string>
 	<string name="touchscreen_controller_edit_menu">Меню редактора</string>

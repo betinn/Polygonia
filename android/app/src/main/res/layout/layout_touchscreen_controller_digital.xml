@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_r2"
         android:layout_width="70dp"
         android:layout_height="35dp"
@@ -28,7 +28,7 @@
         app:pressedDrawable="@drawable/ic_controller_r2_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_r2_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_r1"
         android:layout_width="70dp"
         android:layout_height="35dp"
@@ -39,7 +39,7 @@
         app:pressedDrawable="@drawable/ic_controller_r1_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_r1_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerDPadView
+    <io.github.betinn.polygonia.TouchscreenControllerDPadView
         android:id="@+id/controller_dpad"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -48,7 +48,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_l1"
         android:layout_width="70dp"
         android:layout_height="35dp"
@@ -59,7 +59,7 @@
         app:pressedDrawable="@drawable/ic_controller_l1_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_l1_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_l2"
         android:layout_width="70dp"
         android:layout_height="35dp"
@@ -70,7 +70,7 @@
         app:pressedDrawable="@drawable/ic_controller_l2_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_l2_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_start"
         android:layout_width="40dp"
         android:layout_height="25dp"
@@ -83,7 +83,7 @@
         app:pressedDrawable="@drawable/ic_controller_start_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_start_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_select"
         android:layout_width="40dp"
         android:layout_height="25dp"
@@ -96,7 +96,7 @@
         app:pressedDrawable="@drawable/ic_controller_select_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_select_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_cross"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -107,7 +107,7 @@
         app:pressedDrawable="@drawable/ic_controller_cross_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_cross_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_square"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -118,7 +118,7 @@
         app:pressedDrawable="@drawable/ic_controller_square_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_square_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_triangle"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -129,7 +129,7 @@
         app:pressedDrawable="@drawable/ic_controller_triangle_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_triangle_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_circle"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -140,7 +140,7 @@
         app:pressedDrawable="@drawable/ic_controller_circle_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_circle_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_fast_forward"
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -152,7 +152,7 @@
         app:pressedDrawable="@drawable/ic_controller_fast_forward_pressed"
         app:unpressedDrawable="@drawable/ic_controller_fast_forward" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_pause"
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -163,7 +163,7 @@
         app:pressedDrawable="@drawable/ic_controller_pause_button"
         app:unpressedDrawable="@drawable/ic_controller_pause_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_quick_load"
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -174,7 +174,7 @@
         app:pressedDrawable="@drawable/ic_controller_quick_load_button"
         app:unpressedDrawable="@drawable/ic_controller_quick_load_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_quick_save"
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -185,7 +185,7 @@
         app:pressedDrawable="@drawable/ic_controller_quick_save_button"
         app:unpressedDrawable="@drawable/ic_controller_quick_save_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_autofire_1"
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -198,7 +198,7 @@
         app:pressedDrawable="@drawable/ic_controller_t1_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_t1_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_autofire_2"
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -211,7 +211,7 @@
         app:pressedDrawable="@drawable/ic_controller_t2_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_t2_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_autofire_3"
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -224,7 +224,7 @@
         app:pressedDrawable="@drawable/ic_controller_t3_button_pressed"
         app:unpressedDrawable="@drawable/ic_controller_t3_button" />
 
-    <com.github.stenzek.duckstation.TouchscreenControllerButtonView
+    <io.github.betinn.polygonia.TouchscreenControllerButtonView
         android:id="@+id/controller_button_autofire_4"
         android:layout_width="35dp"
         android:layout_height="35dp"

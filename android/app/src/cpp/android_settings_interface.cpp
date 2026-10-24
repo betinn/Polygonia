@@ -18,7 +18,7 @@ AndroidSettingsInterface::AndroidSettingsInterface(jobject java_context)
   jclass c_preference_manager = env->FindClass("androidx/preference/PreferenceManager");
   jclass c_preference_editor = env->FindClass("android/content/SharedPreferences$Editor");
   jclass c_set = env->FindClass("java/util/Set");
-  jclass c_helper = env->FindClass("com/github/stenzek/duckstation/PreferenceHelpers");
+  jclass c_helper = env->FindClass("io/github/betinn/polygonia/PreferenceHelpers");
   jmethodID m_get_default_shared_preferences =
     env->GetStaticMethodID(c_preference_manager, "getDefaultSharedPreferences",
                            "(Landroid/content/Context;)Landroid/content/SharedPreferences;");

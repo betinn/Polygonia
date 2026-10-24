@@ -40,3 +40,19 @@ __pycache__
 
 # other repos
 /dep/mac
+
+# Polygonia: nunca versionar dados de jogo, BIOS proprietaria, keystore ou logs locais
+*.bin
+*.cue
+*.img
+*.chd
+*.iso
+*.ecm
+*.mds
+*.mdf
+*.pbp
+*.jks
+*.keystore
+logs/
+android/local.properties
+!android/app/src/main/assets/bios/openbios.bin

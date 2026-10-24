@@ -223,7 +223,7 @@ void AndroidHostInterface::Shutdown()
 
 const char* AndroidHostInterface::GetFrontendName() const
 {
-  return "DuckStation Android";
+  return "Polygonia Android";
 }
 
 void AndroidHostInterface::RequestExit()
@@ -967,17 +967,17 @@ extern "C" jint JNI_OnLoad(JavaVM* vm, void* reserved)
     achievement_class, memory_card_file_info_class;
   if ((string_class = env->FindClass("java/lang/String")) == nullptr ||
       (s_String_class = static_cast<jclass>(env->NewGlobalRef(string_class))) == nullptr ||
-      (host_interface_class = env->FindClass("com/github/stenzek/duckstation/AndroidHostInterface")) == nullptr ||
+      (host_interface_class = env->FindClass("io/github/betinn/polygonia/AndroidHostInterface")) == nullptr ||
       (s_AndroidHostInterface_class = static_cast<jclass>(env->NewGlobalRef(host_interface_class))) == nullptr ||
-      (patch_code_class = env->FindClass("com/github/stenzek/duckstation/PatchCode")) == nullptr ||
+      (patch_code_class = env->FindClass("io/github/betinn/polygonia/PatchCode")) == nullptr ||
       (s_PatchCode_class = static_cast<jclass>(env->NewGlobalRef(patch_code_class))) == nullptr ||
-      (game_list_entry_class = env->FindClass("com/github/stenzek/duckstation/GameListEntry")) == nullptr ||
+      (game_list_entry_class = env->FindClass("io/github/betinn/polygonia/GameListEntry")) == nullptr ||
       (s_GameListEntry_class = static_cast<jclass>(env->NewGlobalRef(game_list_entry_class))) == nullptr ||
-      (save_state_info_class = env->FindClass("com/github/stenzek/duckstation/SaveStateInfo")) == nullptr ||
+      (save_state_info_class = env->FindClass("io/github/betinn/polygonia/SaveStateInfo")) == nullptr ||
       (s_SaveStateInfo_class = static_cast<jclass>(env->NewGlobalRef(save_state_info_class))) == nullptr ||
-      (achievement_class = env->FindClass("com/github/stenzek/duckstation/Achievement")) == nullptr ||
+      (achievement_class = env->FindClass("io/github/betinn/polygonia/Achievement")) == nullptr ||
       (s_Achievement_class = static_cast<jclass>(env->NewGlobalRef(achievement_class))) == nullptr ||
-      (memory_card_file_info_class = env->FindClass("com/github/stenzek/duckstation/MemoryCardFileInfo")) == nullptr ||
+      (memory_card_file_info_class = env->FindClass("io/github/betinn/polygonia/MemoryCardFileInfo")) == nullptr ||
       (s_MemoryCardFileInfo_class = static_cast<jclass>(env->NewGlobalRef(memory_card_file_info_class))) == nullptr)
   {
     Log_ErrorPrint("AndroidHostInterface class lookup failed");
@@ -994,19 +994,19 @@ extern "C" jint JNI_OnLoad(JavaVM* vm, void* reserved)
   jclass emulation_activity_class;
   if ((s_AndroidHostInterface_constructor =
          env->GetMethodID(s_AndroidHostInterface_class, "<init>",
-                          "(Landroid/content/Context;Lcom/github/stenzek/duckstation/FileHelper;)V")) == nullptr ||
+                          "(Landroid/content/Context;Lio/github/betinn/polygonia/FileHelper;)V")) == nullptr ||
       (s_AndroidHostInterface_field_mNativePointer =
          env->GetFieldID(s_AndroidHostInterface_class, "mNativePointer", "J")) == nullptr ||
       (s_AndroidHostInterface_field_mEmulationActivity =
          env->GetFieldID(s_AndroidHostInterface_class, "mEmulationActivity",
-                         "Lcom/github/stenzek/duckstation/EmulationActivity;")) == nullptr ||
+                         "Lio/github/betinn/polygonia/EmulationActivity;")) == nullptr ||
       (s_AndroidHostInterface_method_reportError =
          env->GetMethodID(s_AndroidHostInterface_class, "reportError", "(Ljava/lang/String;)V")) == nullptr ||
       (s_AndroidHostInterface_method_reportMessage =
          env->GetMethodID(s_AndroidHostInterface_class, "reportMessage", "(Ljava/lang/String;)V")) == nullptr ||
       (s_AndroidHostInterface_method_openAssetStream = env->GetMethodID(
          s_AndroidHostInterface_class, "openAssetStream", "(Ljava/lang/String;)Ljava/io/InputStream;")) == nullptr ||
-      (emulation_activity_class = env->FindClass("com/github/stenzek/duckstation/EmulationActivity")) == nullptr ||
+      (emulation_activity_class = env->FindClass("io/github/betinn/polygonia/EmulationActivity")) == nullptr ||
       (s_EmulationActivity_class = static_cast<jclass>(env->NewGlobalRef(emulation_activity_class))) == nullptr ||
       (s_EmulationActivity_method_reportError =
          env->GetMethodID(s_EmulationActivity_class, "reportError", "(Ljava/lang/String;)V")) == nullptr ||
@@ -1055,10 +1055,10 @@ extern "C" jint JNI_OnLoad(JavaVM* vm, void* reserved)
 }
 
 #define DEFINE_JNI_METHOD(return_type, name)                                                                           \
-  extern "C" JNIEXPORT return_type JNICALL Java_com_github_stenzek_duckstation_##name(JNIEnv* env)
+  extern "C" JNIEXPORT return_type JNICALL Java_io_github_betinn_polygonia_##name(JNIEnv* env)
 
 #define DEFINE_JNI_ARGS_METHOD(return_type, name, ...)                                                                 \
-  extern "C" JNIEXPORT return_type JNICALL Java_com_github_stenzek_duckstation_##name(JNIEnv* env, __VA_ARGS__)
+  extern "C" JNIEXPORT return_type JNICALL Java_io_github_betinn_polygonia_##name(JNIEnv* env, __VA_ARGS__)
 
 DEFINE_JNI_ARGS_METHOD(jstring, AndroidHostInterface_getScmVersion, jobject unused)
 {
@@ -1067,7 +1067,7 @@ DEFINE_JNI_ARGS_METHOD(jstring, AndroidHostInterface_getScmVersion, jobject unus
 
 DEFINE_JNI_ARGS_METHOD(jstring, AndroidHostInterface_getFullScmVersion, jobject unused)
 {
-  return env->NewStringUTF(SmallString::FromFormat("DuckStation for Android %s (%s)\nBuilt %s %s", g_scm_tag_str,
+  return env->NewStringUTF(SmallString::FromFormat("Polygonia para Android %s (%s)\nBuilt %s %s", g_scm_tag_str,
                                                    g_scm_branch_str, __DATE__, __TIME__));
 }
 
@@ -1482,7 +1482,7 @@ DEFINE_JNI_ARGS_METHOD(void, AndroidHostInterface_setGameSettingValue, jobject o
 
 DEFINE_JNI_ARGS_METHOD(jobjectArray, AndroidHostInterface_getHotkeyInfoList, jobject obj)
 {
-  jclass entry_class = env->FindClass("com/github/stenzek/duckstation/HotkeyInfo");
+  jclass entry_class = env->FindClass("io/github/betinn/polygonia/HotkeyInfo");
   Assert(entry_class != nullptr);
 
   jmethodID entry_constructor =
