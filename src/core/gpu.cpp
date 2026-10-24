@@ -883,7 +883,7 @@ void GPU::CRTCTickEvent(TickCount ticks)
       if (m_GPUSTAT.vertical_interlace)
       {
         m_crtc_state.interlaced_field ^= 1u;
-        m_GPUSTAT.interlaced_field = m_crtc_state.interlaced_field;
+        m_GPUSTAT.interlaced_field = !m_crtc_state.interlaced_field; // upstream 13c5ee8bf: corrige bit 13 (boot do OpenBIOS)
       }
       else
       {
